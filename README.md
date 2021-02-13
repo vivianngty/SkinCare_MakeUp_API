@@ -8,16 +8,24 @@ There will also be a Shopping cart model which contains the products that the cl
 
 Model: 
 
-Skin Care:              |               Make Up:
-- Cleanser              |               - Foundation
-- Eye Cream             |               - Concealer
-- Toner                 |               - Eyebrow
-- Serum                 |               - Mascara
-- Moisturizer           |               - Contour
-- Face oil              |               - Highlight
-                        |               - Blush
-                        |               - Setting powder
-                        |               - Setting spray
+Skin Care:                    
+- Cleanser              
+- Eye Cream             
+- Toner               
+- Serum                 
+- Moisturizer           
+- Face oil              
+
+Make Up:
+- Foundation
+- Concealer
+- Eyebrow
+- Mascara
+- Contour
+- Highlight
+- Blush
+- Setting poder
+- Setting spray
 
 Each model will have:
 - Brand
