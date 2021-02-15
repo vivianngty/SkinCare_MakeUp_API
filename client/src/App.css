@@ -1,38 +1,105 @@
-.App {
+body{
+  font-family: 'Jaldi', sans-serif;
+  margin: 150px;
+}
+
+.header{
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.home-nav{
+  text-decoration: none ;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.skincare-nav{
+  text-decoration: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.nav ul{
+  list-style: none;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-evenly;
 }
 
-.App-link {
-  color: #61dafb;
+.container{
+  width: 60%;
+  margin: 2rem auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.homepagePic{
+  padding-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(8, 3fr);
+  grid-template-rows: repeat(8, 7vw);
+  grid-gap: 1.5rem;
 }
+
+.homepagePic img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.homepagePicOne{
+  grid-row-start: 1;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+.homepagePicTwo{
+  grid-row-start: 1;
+  grid-row-end: 3;
+  grid-column-start: 4;
+  grid-column-end: 6;
+
+}
+
+.homepagePicThree{
+  grid-row-start: 3;
+  grid-row-end: 6;
+  grid-column-start: 1;
+  grid-column-end: 6;
+}
+.homepagePicFour{
+  grid-column-start: 6;
+  grid-column-end: 9;
+  grid-row-start: 1;
+  grid-row-end: 6;
+}
+.homepagePicFive{
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 6;
+  grid-row-end: 9;
+
+}
+.homepagePicSix{
+  grid-column-start: 5;
+  grid-column-end: 9;
+  grid-row-start: 6;
+  grid-row-end: 9;
+
+}
+
+
+
+.footer{
+  position: fixed;
+  bottom: 5px;
+  right: 5px;
+}
+
+.skincareworks{
+  padding-top: 20px;
+  margin-left: 150px;
+}
+
+/* .cleanserInfo{
+  border: 1px solid black;
+}
+
+.cleanserInfo img{
+  width: 15vw;
+  height: auto;
+} */

@@ -21,11 +21,6 @@ public class CleanserController {
         return cleanserService.getAllCleanser();
     }
 
-    @GetMapping ("/{id}")
-    public Cleanser getCleanserById(@PathVariable Long id){
-        return cleanserService.getCleanserById(id);
-    }
-
     @PostMapping
     public Cleanser createCleanser(@RequestBody Cleanser cleanser){
         return cleanserService.createCleanser(cleanser);
