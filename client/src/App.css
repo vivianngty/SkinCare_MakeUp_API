@@ -15,7 +15,7 @@ body{
   text-decoration: none;
 }
 
-.nav ul{
+.navbar ul{
   list-style: none;
   display: flex;
   justify-content: space-evenly;

@@ -6,7 +6,7 @@ class Footer extends React.Component{
     render(){
         return(
             <div className="footer">
-                <h3>Tsz Yan (Vivian) Ng</h3>
+                <h5>Tsz Yan (Vivian) Ng</h5>
             </div>
         )
     }
