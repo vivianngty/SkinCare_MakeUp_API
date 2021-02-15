@@ -16,16 +16,16 @@ import homepagePicSix from './homepagePicSix.jpg'
 
 import Dropdownskincare from './Dropdownskincare'
 
+import Cleansers from './pages/Cleansers'
+
 import Footer from './Footer'
 
 
 function App() {
 
-  const [ click, setClick ] = useState(false);
+ 
   const [ dropdownskincare, setDropdownSkinCare ] = useState (false);
-  
-  const handleClick = () => setClick (!click);
-  const closeMobileMenu = () => setClick (false);
+
   const onMouseEnter = () => {
     setDropdownSkinCare(true)
   };
@@ -43,16 +43,11 @@ function App() {
 
         <div className="navbar">
           <ul>
-                {/* <Link to="/skincare" className="skincare-nav">Skin Care</Link> */}
-                    {/* <ul className={click ? 'nav-menu active' : 'nav-menu'}> */}
-                    
-                      <li className='nav-item' onClick={onMouseEnter} >
-                        <Link to='/skincare' className='nav-links' onClick={onMouseEnter}>Skin Care <i className="fas fa-caret-down" /></Link>
-                        { dropdownskincare && <Dropdownskincare /> }
-                    {/* </ul> */}
-                
+
+            <li className='nav-item' onClick={onMouseEnter} >
+                <Link to='/skincare' className='nav-links' onClick={onMouseEnter}>Skin Care <i className="fas fa-caret-down" /></Link>
+                { dropdownskincare && <Dropdownskincare /> }                
             </li>
-            
 
             <li>      |        </li>
             <li>      Make Up      </li>
@@ -66,8 +61,12 @@ function App() {
                   <Skincare />
             </Route> */}
 
-            <Route path="/">
+            <Route path="/" exact>
               <Home />
+            </Route>
+
+            <Route path="/skincare/cleansers">
+              <Cleansers />
             </Route>
 
           </Switch>

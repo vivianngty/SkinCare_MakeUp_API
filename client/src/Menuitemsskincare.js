@@ -1,12 +1,12 @@
 export const Menuitemsskincare = [
     {
         title: 'Cleansers',
-        path: '/cleansers',
+        path: '/skincare/cleansers',
         cName: 'dropdown-link'
     },
     {
         title: 'Toner',
-        path: '/toner',
+        path: '/skincare/toner',
         cName: 'dropdown-link'
     },
 
