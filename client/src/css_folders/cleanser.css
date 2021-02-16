@@ -1,0 +1,26 @@
+.cleanser-container{
+    margin: 4rem auto;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 60px;
+    width: 70%;
+    justify-content: center;
+}
+
+.cleanser-item{
+    justify-content: center;
+    text-align: center;
+    height: auto;
+    width: 280px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 5px 10px;
+}
+
+.cleanser-item:hover{
+    box-shadow: 0 4px 8px 0 rgb(204, 204, 255), 0 6px 20px 0 rgb(255, 255, 204);
+}
+  
+  .cleanser-item img{
+    width: 150px;
+    height: auto;
+  }

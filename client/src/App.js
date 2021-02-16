@@ -42,7 +42,8 @@ function App() {
         </div>
 
         <div className="navbar">
-          <ul>
+
+          <ul className="nav-menu">
 
             <li className='nav-item' onClick={onMouseEnter} >
                 <Link to='/skincare' className='nav-links' onClick={onMouseEnter}>Skin Care <i className="fas fa-caret-down" /></Link>
@@ -65,7 +66,7 @@ function App() {
               <Home />
             </Route>
 
-            <Route path="/skincare/cleansers">
+            <Route path="/cleansers">
               <Cleansers />
             </Route>
 
@@ -108,36 +109,3 @@ class Skincare extends React.Component{
 
 
 export default App;
-
-
-/* 
-const [ cleansers, setCleansers ] = useState (null);
-
-  async function getCleanser(){
-    try{
-      const res = await axios.get('http://localhost:8080/cleansers')
-      console.log (res.data)
-      setCleansers(res.data);
-    }catch(e){
-      console.error (e, e.message);
-    }
-  }
-
-  useEffect (() => {
-    getCleanser()
-  }, [])
-*/
-/* {
-        cleansers && cleansers.map (cleanser => {
-          return (
-            <div className ="cleanserInfo">
-              <h4>{cleanser.brand}</h4>
-              <figure> <img src= {cleanser.image } /> </figure>
-              <p>{cleanser.description}</p>
-              <p>{cleanser.ingredients}</p>
-              <h5>${cleanser.price}</h5>
-            </div>
-          )
-        })
-      }
-*/

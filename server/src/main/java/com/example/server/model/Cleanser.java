@@ -18,10 +18,6 @@ public class Cleanser {
     @Column
     private String name;
     @Column
-    private String description;
-    @Column
-    private String Ingredients;
-    @Column
     private int price;
     @Column
     private String image;
@@ -51,22 +47,6 @@ public class Cleanser {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public String getIngredients() {
-        return Ingredients;
-    }
-
-    public void setIngredients(String ingredients) {
-        Ingredients = ingredients;
     }
 
     public int getPrice() {
