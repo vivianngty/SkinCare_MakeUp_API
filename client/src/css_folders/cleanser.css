@@ -1,3 +1,10 @@
+.cleanser-title{
+    color: slategrey;
+    margin-top: 4rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
 .cleanser-container{
     margin: 4rem auto;
     display: grid;
@@ -18,9 +25,27 @@
 
 .cleanser-item:hover{
     box-shadow: 0 4px 8px 0 rgb(204, 204, 255), 0 6px 20px 0 rgb(255, 255, 204);
+    cursor: crosshair;
 }
   
   .cleanser-item img{
     width: 150px;
     height: auto;
+  }
+
+  .cleanser-item button{
+      border: none;
+      padding: 10px;
+      margin-bottom: 5px;
+  }
+
+  .cleanser-item button:hover{
+      border:1px solid rgba(0, 0, 0, 0.2);
+      background-color: white;
+      color:rgba(0, 0, 0, 0.19);
+      cursor: pointer;
+  }
+
+  .cleanser-brand{
+      font-style: italic;
   }

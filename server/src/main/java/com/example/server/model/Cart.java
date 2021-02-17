@@ -1,17 +1,14 @@
 package com.example.server.model;
 
-import org.springframework.boot.autoconfigure.domain.EntityScan;
-
 import javax.persistence.*;
 
-
 @Entity
-@Table (name ="cleanser_table")
-public class Cleanser {
+@Table(name= "cart_table")
+public class Cart {
 
     @Id
     @Column
-    @GeneratedValue (strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @Column
     private String brand;
@@ -22,7 +19,7 @@ public class Cleanser {
     @Column
     private String image;
 
-    public Cleanser() {
+    public Cart() {
     }
 
     public Long getId() {

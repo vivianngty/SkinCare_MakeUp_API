@@ -22,23 +22,35 @@ function Cleansers (){
         getCleanser()
     }, [])
 
-    return(
-        <div className="cleanser-container">
-            {
-                cleansers && cleansers.map (cleanser => {
-                    return(
-                        <div className="cleanser-item">
-                            <figure><img src= { cleanser.image } /></figure>
-                            <h5>{ cleanser.brand }</h5>
-                            <h4>{ cleanser.name }</h4>
-                            <h4>${ cleanser.price }</h4>
-                        </div>
-                    )
-                })
-            }
-            
+    const [ selectedItem, setSelectedItem ] = useState(null);
+    
+    function selectItem(cleanser){
+        setSelectedItem(cleanser);
+        console.log(selectedItem)
+    }
 
-        
+    return(
+        <div>
+            <h3 className="cleanser-title">Cleanser</h3>
+            <hr></hr>
+            <div className="cleanser-container">
+                {
+                    cleansers && cleansers.map (cleanser => {
+                        return(
+                            <div className="cleanser-item" key={ cleanser.id }>
+                                <figure><img src= { cleanser.image } /></figure>
+                                <h5 className="cleanser-brand">{ cleanser.brand }</h5>
+                                <h4>{ cleanser.name }</h4>
+                                <h4>${ cleanser.price }</h4>
+                                <button onClick={ () => selectItem(cleanser)}> Add to cart </button>
+                            </div>
+                        )
+                    })
+                }
+                
+
+            
+            </div>
         </div>
     )
 }
