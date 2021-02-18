@@ -51,7 +51,7 @@ function ShoppingCart(){
                                 <h4>${ cartItem.price }</h4>
                             </div>
                             <div className="section-three">
-                                <button onClick ={ () => handleDelete( cartItem.id )}> <i class="fa fa-trash" aria-hidden="true"></i> </button>
+                                <button className="trashCan" onClick ={ () => handleDelete( cartItem.id )}> <i class="fa fa-trash" aria-hidden="true"></i> </button>
                             </div>
                         </div>
                     )

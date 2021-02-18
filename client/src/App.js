@@ -18,6 +18,7 @@ import Dropdownskincare from './Dropdownskincare'
 import ShoppingCart from './ShoppingCart'
 
 import Cleansers from './pages/Cleansers'
+import Toner from './pages/Toner'
 
 import Footer from './Footer'
 
@@ -85,6 +86,10 @@ function App() {
 
             <Route path="/cleansers">
               <Cleansers />
+            </Route>
+
+            <Route path="/toner">
+              <Toner />
             </Route>
 
             <Route path="/shoppingcart">
