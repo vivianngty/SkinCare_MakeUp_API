@@ -1,6 +1,14 @@
 body{
   font-family: 'Jaldi', sans-serif;
-  margin: 150px;
+  margin: 100px;
+}
+
+.shoppingcart-nav{
+  text-decoration: none;
+  font-size: 15px;
+  position: fixed;
+  top: 35px;
+  right: 30px;
 }
 
 .header{
@@ -8,7 +16,8 @@ body{
 }
 
 .home-nav{
-  text-decoration: none ;
+  text-decoration: none;
+  font-size: 20px;
 }
 
 .skincare-nav{
@@ -95,11 +104,3 @@ body{
   margin-left: 150px;
 }
 
-/* .cleanserInfo{
-  border: 1px solid black;
-}
-
-.cleanserInfo img{
-  width: 15vw;
-  height: auto;
-} */

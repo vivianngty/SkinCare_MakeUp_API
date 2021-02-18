@@ -21,27 +21,30 @@ function Cleansers (){
         getCleanser()
     }, [])
 
-    const [ selectedItem, setSelectedItem ] = useState(null);
+    const [ selectedItem, setSelectedItem ] = useState([]);
 
-    /* const [ cart, setCart ] = useState (null); */
+
 
     // need to add ...cart //
     
     function selectItem(cleanser){
         setSelectedItem(cleanser);
-        createCart();
+        createCart(); 
+/*         let cart = {"brand": selectedItem.brand, "name": selectedItem.name, "price": selectedItem.price, "image": selectedItem.image};
+        console.log(cart) */
     }
-    const cart = {"brand": selectedItem.brand, "name": selectedItem.name, "price": selectedItem.price, "image": selectedItem.image}
-    console.log(cart)
+        
+    
 
-    async function createCart(){
+       async function createCart(){
+        let item = {"brand": selectedItem.brand, "name": selectedItem.name, "price": selectedItem.price, "image": selectedItem.image};
         try{
-            const res = await axios.post ('http://localhost:8080/cart', cart);
-            console.log (res.data)
+            const res = await axios.post ('http://localhost:8080/cart', item);
+            console.log (res.data);
         }catch(e){
             console.error (e, e.message)
         }
-    }  
+    }     
 
     return(
         <div>
@@ -68,6 +71,5 @@ function Cleansers (){
         </div>
     )
 }
-
 
 export default Cleansers;

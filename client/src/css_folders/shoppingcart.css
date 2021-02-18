@@ -1,0 +1,49 @@
+h3{
+    margin-top: 50px;
+    margin-left: 150px;
+    margin-bottom: 50px;
+}
+
+img{
+    width: 150px;
+    height: auto;
+  }
+
+.shoppingCart-content{
+    width: 60%;
+    margin: 2rem auto;
+}
+
+.individual{
+    display: grid;
+    grid-template-columns: repeat (3, 3fr);
+    border: 1px solid black;
+}
+
+.section-one{
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.section-two{
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.section-three{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    text-align: center;
+    margin: 3rem auto;
+}
+
+button{
+    border: none;
+    height: 50px;
+    background-color: white;
+}
+
+button:hover{
+    font-size: 25px;
+    cursor: pointer;
+}

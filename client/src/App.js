@@ -15,6 +15,7 @@ import homepagePicFive from './homepagePicFive.png'
 import homepagePicSix from './homepagePicSix.jpg'
 
 import Dropdownskincare from './Dropdownskincare'
+import ShoppingCart from './ShoppingCart'
 
 import Cleansers from './pages/Cleansers'
 
@@ -29,6 +30,21 @@ function App() {
   const onMouseEnter = () => {
     setDropdownSkinCare(true)
   };
+
+      const [ shoppingCart, setShoppingCart ] = useState ([]);
+
+      async function getShoppingCart(){
+        try{
+            const res = await axios.get ('http://localhost:8080/cart');
+            setShoppingCart (res.data);
+        }catch(e){
+            console.error (e, e.message);
+        }
+    }
+
+    useEffect (() => {
+        getShoppingCart();
+    }, [])
   
 
 
@@ -36,6 +52,7 @@ function App() {
     <div>
       <Router>
         <div className="header">
+          <Link to="/shoppingcart" className="shoppingcart-nav"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Shopping Cart ({shoppingCart.length}) </Link>
           <header>
               <Link to="/" className="home-nav">Skin Care & Make Up API</Link>
           </header>
@@ -68,6 +85,10 @@ function App() {
 
             <Route path="/cleansers">
               <Cleansers />
+            </Route>
+
+            <Route path="/shoppingcart">
+              <ShoppingCart />
             </Route>
 
           </Switch>
