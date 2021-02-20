@@ -61,7 +61,7 @@
 .grid-container{
     display: grid;
     height: 60%;
-    grid-template-columns: repeat (2, auto);
+    grid-template-columns: repeat (3, auto);
     grid-template-rows: auto;
 }
 
@@ -108,14 +108,17 @@
     margin-left: 5rem;
 }
 
-.dialog {
-    box-shadow: 0 8px 6px -6px black;
-    position: static;
-    left: 20%;
-    top: 10%;
-  }
-  
-  .image {
-    width: 300px;
-  }
-  
+.grid-item-three{
+    color: black;
+    font-weight: bold;
+    grid-column: 3 / 4;
+    grid-row:  1 / 2;
+}
+
+.grid-item-three p{
+    margin-top: 10px;
+    margin-left: 7rem;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}

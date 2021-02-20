@@ -15,6 +15,9 @@ function Dropdownskincare(){
     const [ click, setClick ] = useState (false);
     const handleClick = () => setClick (!click);
 
+
+
+
     return(
         <div>
             <ul onClick= {handleClick} className={click ? 'dropdown-menu clicked' : 'dropdown-menu' }>
@@ -35,12 +38,17 @@ function Dropdownskincare(){
                     <div className="grid-item-two">
                         <ul>
                             <li className="shop-by-skintype-title">Shop by skin type  <i class="fa fa-angle-down" aria-hidden="true"></i></li>
-                            <li className="shop-by-skintype-item">Normal to Oily</li>
-                            <li className="shop-by-skintype-item">Normal to Dry</li>
+                            <li className="shop-by-skintype-item">Normal skin</li>
+                            <li className="shop-by-skintype-item">Dry skin</li>
+                            <li className="shop-by-skintype-item">Oily skin</li>
                             <li className="shop-by-skintype-item">Combination</li>
                             <li className="shop-by-skintype-item">Sensitive</li>
-                            <li className="shop-by-skintype-item">  </li>
                         </ul>
+                    </div>
+
+                    <div className="grid-item-three">
+                        <p> Don't know what skin type you are? See below...</p>
+                        <figure className="shop-by-skintype-item"><img src={skintype} style={{ width: '100%', maxWidth: '670px' }}/></figure>
                     </div>
 
                 </div>
