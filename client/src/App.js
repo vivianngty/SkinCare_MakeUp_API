@@ -15,10 +15,21 @@ import homepagePicFive from './homepagePicFive.png'
 import homepagePicSix from './homepagePicSix.jpg'
 
 import Dropdownskincare from './Dropdownskincare'
+import Dropdownmakeup from './Dropdownmakeup'
 import ShoppingCart from './ShoppingCart'
 
 import Cleansers from './pages/Cleansers'
 import Toner from './pages/Toner'
+import EyeCream from './pages/EyeCream'
+import Serum from './pages/Serum'
+import Moisturizer from './pages/Moisturizer'
+import FaceOil from './pages/FaceOil'
+
+import NormalSkin from './pages/NormalSkin'
+import DrySkin from './pages/DrySkin'
+import OilySkin from './pages/OilySkin'
+import CombinationSkin from './pages/CombinationSkin'
+import SensitiveSkin from './pages/SensitiveSkin'
 
 import Footer from './Footer'
 
@@ -31,6 +42,13 @@ function App() {
   const onMouseEnter = () => {
     setDropdownSkinCare(true)
   };
+
+  const [ dropdownmakeup, setDropdownMakeUp ] = useState (false); 
+
+  const showDropDown = () => {
+    setDropdownMakeUp(true);
+  };
+
 
       const [ shoppingCart, setShoppingCart ] = useState ([]);
 
@@ -69,7 +87,11 @@ function App() {
             </li>
 
             <li>      |        </li>
-            <li>      Make Up      </li>
+
+
+            <li onClick={showDropDown}><Link className="make-up-nav" onClick={showDropDown}>Make Up  <i className="fas fa-caret-down" /></Link>
+              { dropdownmakeup && <Dropdownmakeup />}
+            </li>
           </ul>
 
 
@@ -90,6 +112,42 @@ function App() {
 
             <Route path="/toner">
               <Toner />
+            </Route>
+
+            <Route path="/eyecream">
+              <EyeCream />
+            </Route>
+
+            <Route path="/serum">
+              <Serum />
+            </Route>
+
+            <Route path="/moisturizer">
+              <Moisturizer />
+            </Route>
+
+            <Route path="/faceoil">
+              <FaceOil />
+            </Route>
+
+            <Route path="/normalskin">
+              <NormalSkin />
+            </Route>
+
+            <Route path="/dryskin">
+              <DrySkin />
+            </Route>
+
+            <Route path="/oilyskin">
+              <OilySkin />
+            </Route>
+
+            <Route path="/combinationskin">
+              <CombinationSkin />
+            </Route>
+
+            <Route path="/sensitiveskin">
+              <SensitiveSkin />
             </Route>
 
             <Route path="/shoppingcart">

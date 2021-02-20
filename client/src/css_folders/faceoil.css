@@ -1,0 +1,58 @@
+.faceoil-title{
+    color: slategrey;
+    margin-top: 4rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.faceoil-container{
+    margin: 4rem auto;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 60px;
+    width: 70%;
+    justify-content: center;
+}
+
+.faceoil-item{
+    justify-content: center;
+    text-align: center;
+    height: auto;
+    width: 280px;
+    box-shadow: rgba(211,211,211, 1.0) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    /* box-shadow: rgba(211,211,211, 1.0) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset; */
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+    padding: 5px 10px;
+}
+
+.faceoil-item:hover{
+    box-shadow: rgb(186,85,211) 0px 20px 30px -10px;
+    /* box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; */
+/*     box-shadow: 0 4px 8px 0 rgb(204, 204, 255), 0 6px 20px 0 rgb(255, 255, 204); */
+    cursor: crosshair;
+}
+  
+  .faceoil-item img{
+    width: 150px;
+    height: auto;
+  }
+
+  .faceoil-item button{
+        border-radius: 15%;
+      border: none;
+      padding: 10px;
+      margin-bottom: 5px;
+      font-size: 12px;
+      background-color: lightgray;
+  }
+
+  .faceoil-item button:hover{
+    background-color: lightgray;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+
+  .faceoil-brand{
+      font-style: italic;
+  }

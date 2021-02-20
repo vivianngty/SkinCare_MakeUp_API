@@ -38,11 +38,11 @@ function Dropdownskincare(){
                     <div className="grid-item-two">
                         <ul>
                             <li className="shop-by-skintype-title">Shop by skin type  <i class="fa fa-angle-down" aria-hidden="true"></i></li>
-                            <li className="shop-by-skintype-item">Normal skin</li>
-                            <li className="shop-by-skintype-item">Dry skin</li>
-                            <li className="shop-by-skintype-item">Oily skin</li>
-                            <li className="shop-by-skintype-item">Combination</li>
-                            <li className="shop-by-skintype-item">Sensitive</li>
+                            <li className="shop-by-skintype-item"><Link to="/normalskin" className="normal-skin-title">Normal skin</Link></li>
+                            <li className="shop-by-skintype-item"><Link to="/dryskin" className="dry-skin-title">Dry skin</Link></li>
+                            <li className="shop-by-skintype-item"><Link to="/oilyskin" className="oily-skin-title">Oily skin</Link></li>
+                            <li className="shop-by-skintype-item"><Link to="/combinationskin" className="combination-skin-title">Combination skin</Link></li>
+                            <li className="shop-by-skintype-item"><Link to="/sensitiveskin" className="sensitive-skin-title">Sensitive skin</Link></li>
                         </ul>
                     </div>
 

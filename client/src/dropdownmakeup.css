@@ -1,0 +1,67 @@
+.dropdown-menu{
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+        width: 89.5%;
+        height: 60%;
+        background: white;
+        left: 100px;
+        position: absolute;
+        list-style: none;
+        text-align: start;
+        padding: 1px;
+    
+    }
+    .dropdown-menu li{
+        cursor: pointer;
+        text-decoration: none;
+    }
+    
+    .dropdown-menu li:hover{
+        font-style: italic;
+        text-decoration: none;
+    
+    }
+    
+    .dropdown-menu.clicked{
+        display: none;
+        text-decoration: none;
+    }
+    
+    .dropdown-link{
+        display: block; 
+        width: 100%; 
+        height: 100%;
+        color:black;
+        padding: 10px;
+        text-decoration: none;
+        margin: 10px;
+        margin-left: 5rem;
+    }
+    
+    .grid-container{
+        display: grid;
+        height: 60%;
+        grid-template-columns: repeat (2, auto);
+        grid-template-rows: auto;
+    }
+    
+    .grid-item-one{
+        color: black;
+        grid-column: 1 / 2;
+        grid-row:  1 / 2;
+    }
+    
+    .shop-by-products-title{
+        font-weight: bold;
+        display: block; 
+        width: 100%; 
+        height: 100%;
+        padding: 10px;
+        margin: 10px;
+        margin-left: 5rem;
+    }
+    
+    .grid-item-two{
+        color: black;
+        grid-column: 2 / 3;
+        grid-row:  1 / 2;
+    }

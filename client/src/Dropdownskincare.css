@@ -31,12 +31,12 @@
 
 }
 
-.shop-by-products li{
+.dropdown-menu li{
     cursor: pointer;
     text-decoration: none;
 }
 
-.shop-by-products li:hover{
+.dropdown-menu li:hover{
     font-style: italic;
     text-decoration: none;
 
@@ -122,3 +122,29 @@
     padding-left: 10px;
     padding-right: 10px;
 }
+
+.normal-skin-title{
+    text-decoration: none;
+    color: black;
+}
+
+.dry-skin-title{
+    text-decoration: none;
+    color: black;
+}
+
+.oily-skin-title{
+    text-decoration: none;
+    color: black;
+}
+
+.combination-skin-title{
+    text-decoration: none;
+    color: black;
+}
+
+.sensitive-skin-title{
+    text-decoration: none;
+    color: black;
+}
+
