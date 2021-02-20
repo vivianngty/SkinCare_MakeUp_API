@@ -9,7 +9,7 @@ export const Menuitemsskincare = [
         path: '/toner',
         cName: 'dropdown-link'
     },
-    {
+     {
         title: 'Eye Cream',
         path: '/eyecream',
         cName: 'dropdown-link'
@@ -28,5 +28,5 @@ export const Menuitemsskincare = [
         title: 'Face oil',
         path: '/faceoil',
         cName: 'dropdown-link'
-    }
+    } 
 ]

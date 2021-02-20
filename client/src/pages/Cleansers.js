@@ -49,7 +49,7 @@ function Cleansers (){
     return(
         <div>
             <h3 className="cleanser-title">Cleanser</h3>
-            <hr></hr>
+ 
             <div className="cleanser-container">
                 {
                     cleansers && cleansers.map (cleanser => {

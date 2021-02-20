@@ -47,7 +47,7 @@ function Toner (){
     return(
         <div>
             <h3 className="toner-title">Toners</h3>
-            <hr></hr>
+
             <div className="toner-container">
                 {
                     toners && toners.map (toner => {

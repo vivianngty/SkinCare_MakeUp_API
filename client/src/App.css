@@ -20,13 +20,18 @@ body{
   font-size: 20px;
 }
 
-.skincare-nav{
-  text-decoration: none;
+.nav-menu {
+  color: white;
+  background: linear-gradient(90deg, rgb(253, 250, 250) 0%, rgb(248, 228, 228) 110%);
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .navbar ul{
   list-style: none;
-  display: flex;
+/*   display: flex; */
   justify-content: space-evenly;
 }
 
@@ -99,8 +104,4 @@ body{
   right: 5px;
 }
 
-.skincareworks{
-  padding-top: 20px;
-  margin-left: 150px;
-}
 

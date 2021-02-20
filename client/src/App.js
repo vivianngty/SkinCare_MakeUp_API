@@ -64,7 +64,7 @@ function App() {
           <ul className="nav-menu">
 
             <li className='nav-item' onClick={onMouseEnter} >
-                <Link to='/skincare' className='nav-links' onClick={onMouseEnter}>Skin Care <i className="fas fa-caret-down" /></Link>
+                <Link className='nav-links' onClick={onMouseEnter}>Skin Care <i className="fas fa-caret-down" /></Link>
                 { dropdownskincare && <Dropdownskincare /> }                
             </li>
 
@@ -123,15 +123,7 @@ class Home extends React.Component{
   }
 }
 
-class Skincare extends React.Component{
-  render(){
-    return(
-      <div className="skincareworks">
-        <h3>Skin Care works</h3>
-      </div>
-    )
-  }
-}
+
 
 
 export default App;
