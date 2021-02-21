@@ -58,6 +58,7 @@ function SensitiveSkin (){
                                 <figure><img src= { sensitiveskin.image } /></figure>
                                 <h5 className="sensitiveskin-brand">{ sensitiveskin.brand }</h5>
                                 <h4>{ sensitiveskin.name }</h4>
+                                <h4>Product type: { sensitiveskin.type }</h4>
                                 <h4>${ sensitiveskin.price }</h4>
                                 <button onClick={ () => selectItem(sensitiveskin)}> Add to cart </button>
                             </div>

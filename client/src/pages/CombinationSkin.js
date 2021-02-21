@@ -58,6 +58,7 @@ function CombinationSkin (){
                                 <figure><img src= { combinationskin.image } /></figure>
                                 <h5 className="combinationskin-brand">{ combinationskin.brand }</h5>
                                 <h4>{ combinationskin.name }</h4>
+                                <h4>Product type: { combinationskin.type }</h4>
                                 <h4>${ combinationskin.price }</h4>
                                 <button onClick={ () => selectItem(combinationskin)}> Add to cart </button>
                             </div>

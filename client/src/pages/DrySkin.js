@@ -58,6 +58,7 @@ function DrySkin (){
                                 <figure><img src= { dryskin.image } /></figure>
                                 <h5 className="dryskin-brand">{ dryskin.brand }</h5>
                                 <h4>{ dryskin.name }</h4>
+                                <h4>Product type: { dryskin.type }</h4>
                                 <h4>${ dryskin.price }</h4>
                                 <button onClick={ () => selectItem(dryskin)}> Add to cart </button>
                             </div>

@@ -58,6 +58,7 @@ function OilySkin (){
                                 <figure><img src= { oilyskin.image } /></figure>
                                 <h5 className="oilyskin-brand">{ oilyskin.brand }</h5>
                                 <h4>{ oilyskin.name }</h4>
+                                <h4>Product type: { oilyskin.type }</h4>
                                 <h4>${ oilyskin.price }</h4>
                                 <button onClick={ () => selectItem(oilyskin)}> Add to cart </button>
                             </div>

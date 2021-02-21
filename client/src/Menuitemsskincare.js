@@ -1,6 +1,6 @@
 export const Menuitemsskincare = [
     {
-        title: 'Cleansers',
+        title: 'Face wash & Cleansers',
         path: '/cleansers',
         cName: 'dropdown-link'
     },
@@ -10,7 +10,7 @@ export const Menuitemsskincare = [
         cName: 'dropdown-link'
     },
      {
-        title: 'Eye Cream',
+        title: 'Eye Cream & Treatments',
         path: '/eyecream',
         cName: 'dropdown-link'
     },

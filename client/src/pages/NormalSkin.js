@@ -58,6 +58,7 @@ function NormalSkin (){
                                 <figure><img src= { normalskin.image } /></figure>
                                 <h5 className="normalskin-brand">{ normalskin.brand }</h5>
                                 <h4>{ normalskin.name }</h4>
+                                <h4>Product type: { normalskin.type }</h4>
                                 <h4>${ normalskin.price }</h4>
                                 <button onClick={ () => selectItem(normalskin)}> Add to cart </button>
                             </div>
