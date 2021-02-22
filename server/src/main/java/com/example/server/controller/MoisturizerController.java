@@ -20,6 +20,11 @@ public class MoisturizerController {
         return moisturizerService.getAllMoisturizer();
     }
 
+    @GetMapping("/{id}")
+    public Moisturizer getMoisturizerById(@PathVariable Long id){
+        return moisturizerService.getMoisturizerById(id);
+    }
+
     @PostMapping
     public Moisturizer createMoisturizer(@RequestBody Moisturizer moisturizer){
         return moisturizerService.createMoisturizer(moisturizer);

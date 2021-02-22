@@ -20,6 +20,11 @@ public class SerumController {
         return serumService.getAllSerum();
     }
 
+    @GetMapping("/{id}")
+    public Serum getSerumById (@PathVariable Long id){
+        return serumService.getSerumById(id);
+    }
+
     @PostMapping
     public Serum createSerum(@RequestBody Serum serum){
         return serumService.createSerum(serum);

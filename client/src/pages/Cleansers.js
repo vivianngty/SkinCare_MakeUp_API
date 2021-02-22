@@ -33,6 +33,10 @@ function Cleansers (){
 /*         let cart = {"brand": selectedItem.brand, "name": selectedItem.name, "price": selectedItem.price, "image": selectedItem.image};
         console.log(cart) */
     }
+
+    useEffect (() => {
+        createCart();
+    }, [])
         
     
 

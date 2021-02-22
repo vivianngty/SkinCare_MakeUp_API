@@ -31,6 +31,17 @@ function ShoppingCart(){
         }
     }
 
+    
+      if ( shoppingCart.length == 0 ){
+        return(
+            <div className="empty-cart">
+                <h3>Did you forget to put something into cart?</h3>
+                <h3>Below is some suggestions for you .....  <i class="fa fa-angle-double-down" aria-hidden="true"></i></h3>
+                <EmptyCart />
+            </div>
+        )
+    }   
+
 
 
     return(
@@ -61,6 +72,63 @@ function ShoppingCart(){
             </div>
         </div>
 
+    )
+}
+
+function EmptyCart(){
+
+    const [ cleanser, setCleanser ] = useState ([]);
+
+    async function getCleanser(){
+        try{
+        const res = await axios.get('http://localhost:8080/cleansers/' + random );
+        setCleanser(res.data);
+        }catch(e){
+        console.error (e, e.message);
+        }
+    }
+
+    const [ toner, setToner ] = useState ([]);
+
+    async function getToner(){
+        try{
+        const res = await axios.get('http://localhost:8080/toner/' + random)
+        setToner (res.data);
+        }catch(e){
+        console.error (e, e.message);
+        }
+    }
+
+    useEffect (() => {
+        getCleanser();
+        getToner ();
+    }, [])
+
+
+
+
+
+
+    let random = Math.floor(Math.random()*9) + 1; // random number from 1 - 9
+
+    return(
+        <div className="random-container">
+
+            <div className="random-cleanser-item">
+                <figure><img src= { cleanser.image } /></figure>
+                <h5 className="cleanser-brand">{ cleanser.brand }</h5>
+                <h4>{ cleanser.name }</h4>
+                <h4>${ cleanser.price }</h4>
+            </div>
+
+            <div className="random-toner-item">
+                <figure><img src= { toner.image } /></figure>
+                <h5 className="toner-brand">{ toner.brand }</h5>
+                <h4>{ toner.name }</h4>
+                <h4>${ toner.price }</h4>
+            </div>
+
+        </div>
     )
 }
 

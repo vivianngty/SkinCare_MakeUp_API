@@ -20,6 +20,11 @@ public class FaceoilController {
         return faceoilService.getAllFaceoil();
     }
 
+    @GetMapping ("/{id}")
+    public Faceoil getFaceoilById (@PathVariable Long id){
+        return faceoilService.getFaceoilById(id);
+    }
+
     @PostMapping
     public Faceoil createFaceoil(@RequestBody Faceoil faceoil){
         return faceoilService.createFaceoil(faceoil);

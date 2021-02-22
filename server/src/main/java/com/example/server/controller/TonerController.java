@@ -20,6 +20,11 @@ public class TonerController {
         return tonerService.getAllToner();
     }
 
+    @GetMapping("/{id}")
+    public Toner getTonerById(@PathVariable Long id){
+        return tonerService.getTonerById(id);
+    }
+
     @PostMapping
     public Toner createToner(@RequestBody Toner toner){
         return tonerService.createToner(toner);

@@ -2,6 +2,7 @@ package com.example.server.controller;
 
 import com.example.server.model.Cleanser;
 import com.example.server.model.Eyecream;
+import com.example.server.model.Toner;
 import com.example.server.service.EyecreamService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -17,6 +18,11 @@ public class EyecreamController {
     @GetMapping
     public Iterable<Eyecream> getAllEyecream(){
         return eyecreamService.getAllEyecream();
+    }
+
+    @GetMapping("/{id}")
+    public Eyecream getEyecreamById(@PathVariable Long id){
+        return eyecreamService.getEyecreamById(id);
     }
 
     @PostMapping
