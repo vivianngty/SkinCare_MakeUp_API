@@ -38,7 +38,7 @@
   }
 
   .sensitiveskin-item button{
-        border-radius: 15%;
+      border-radius: 15%;
       border: none;
       padding: 10px;
       margin-bottom: 5px;
@@ -47,7 +47,8 @@
   }
 
   .sensitiveskin-item button:hover{
-    background-color: lightgray;
+    background-color: black;
+    color: white;
     cursor: pointer;
     font-size: 12px;
 }

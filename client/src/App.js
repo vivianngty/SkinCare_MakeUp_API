@@ -15,7 +15,6 @@ import homepagePicFive from './homepagePicFive.png'
 import homepagePicSix from './homepagePicSix.jpg'
 
 import Dropdownskincare from './Dropdownskincare'
-import Dropdownmakeup from './Dropdownmakeup'
 import ShoppingCart from './ShoppingCart'
 
 import Cleansers from './pages/Cleansers'
@@ -32,6 +31,8 @@ import CombinationSkin from './pages/CombinationSkin'
 import SensitiveSkin from './pages/SensitiveSkin'
 
 import Footer from './Footer'
+import Help from './pages/Help'
+
 
 
 function App() {
@@ -42,13 +43,6 @@ function App() {
   const onMouseEnter = () => {
     setDropdownSkinCare(true)
   };
-
-  const [ dropdownmakeup, setDropdownMakeUp ] = useState (false); 
-
-  const showDropDown = () => {
-    setDropdownMakeUp(true);
-  };
-
 
       const [ shoppingCart, setShoppingCart ] = useState ([]);
 
@@ -72,35 +66,34 @@ function App() {
       <Router>
         <div className="header">
           <Link to="/shoppingcart" className="shoppingcart-nav"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Shopping Cart ({shoppingCart.length}) </Link>
-          <header>
-              <Link to="/" className="home-nav">Skin Care & Make Up API</Link>
-          </header>
+{/*           <header>
+              <Link to="/" className="home-nav">Skin Care API</Link>
+          </header> */}
         </div>
 
         <div className="navbar">
 
-          <ul className="nav-menu">
+            <ul className="nav-menu">
 
-            <li className='nav-item' onClick={onMouseEnter} >
-                <Link className='nav-links' onClick={onMouseEnter}>Skin Care <i className="fas fa-caret-down" /></Link>
-                { dropdownskincare && <Dropdownskincare /> }                
-            </li>
+              <li className="home"> 
+                <Link to="/" className="home-nav"><i class="fa fa-home" aria-hidden="true"></i></Link>
+              </li>
 
-            <li>      |        </li>
+              <li className='nav-item' onClick={onMouseEnter} >
+                  <Link className='nav-links' onClick={onMouseEnter}>Skin Care <i className="fas fa-caret-down" /></Link>
+                  { dropdownskincare && <Dropdownskincare /> }                
+              </li>
 
+            </ul>
+          </div>
 
-            <li onClick={showDropDown}><Link className="make-up-nav" onClick={showDropDown}>Make Up  <i className="fas fa-caret-down" /></Link>
-              { dropdownmakeup && <Dropdownmakeup />}
-            </li>
-          </ul>
+          <div>
+            <Link to="/help" className="help-button">  <i class="fa fa-question-circle" aria-hidden="true"></i>  help  </Link>
+          </div>
 
 
 
           <Switch>
-
-            {/* <Route path="/skincare">
-                  <Skincare />
-            </Route> */}
 
             <Route path="/" exact>
               <Home />
@@ -154,12 +147,19 @@ function App() {
               <ShoppingCart />
             </Route>
 
+            <Route path="/help">
+                <Help />
+            </Route>
+
+            
+
           </Switch>
 
 
-        </div>
+
       </Router>
       <Footer />
+      
     </div>
   );
 }
