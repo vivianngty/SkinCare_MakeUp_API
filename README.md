@@ -18,17 +18,6 @@ Skin Care:
 - Moisturizer           
 - Face oil              
 
-Make Up:
-- Foundation
-- Concealer
-- Eyebrow
-- Mascara
-- Contour
-- Highlight
-- Blush
-- Setting poder
-- Setting spray
-
 Each model will have:
 - Brand
 - Image
