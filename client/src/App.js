@@ -63,8 +63,10 @@ function App() {
 
   return (
     <div>
+      
       <Router>
         <div className="header">
+        
           <Link to="/shoppingcart" className="shoppingcart-nav"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Shopping Cart ({shoppingCart.length}) </Link>
 {/*           <header>
               <Link to="/" className="home-nav">Skin Care API</Link>
@@ -72,6 +74,7 @@ function App() {
         </div>
 
         <div className="navbar">
+          {/* <h3 className="free-shipping-banner">FREE SHIPPING ON U.S. ORDERS $75+ </h3> */}
 
             <ul className="nav-menu">
 

@@ -15,6 +15,14 @@ img{
     height: auto;
 }
 
+span{
+    font-size: 10px;
+}
+
+.first-hr{
+    height: 1px;
+    border-top: rgb(128, 77, 77);
+}
 
 .flex-container{
     display: flex;
@@ -40,6 +48,48 @@ img{
     justify-content: space-between;
     padding-left: 50px;
     padding-right: 50px;
+}
+
+.three{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.four{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.five{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.six{
+    display: flex;
+    justify-content: center;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.six button{
+    border: none;
+    padding: 15px;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 5%;
+}
+.six button:hover{
+    border: none;
+    padding: 15px;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 5%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background: rgba(87, 85, 85, 0.596);
+    color: white;
 }
 
 

@@ -41,12 +41,33 @@ function ShoppingCart(){
             <div className="empty-cart">
                 <h3>Did you forget to put something into cart?</h3>
                 <br></br>
-                <h3>Below is some suggestions for you .....  <i class="fa fa-angle-double-down" aria-hidden="true"></i></h3>
+                <h3>Below are some suggestions for you .....  <i class="fa fa-angle-double-down" aria-hidden="true"></i></h3>
                 <EmptyCart />
             </div>
         )
     }   
 
+    let total = 0;
+    for ( let i = 0; i < shoppingCart.length; i++ ){
+        total = total + shoppingCart[i].price;
+    }
+
+    let shipping;
+    let shippingLabel;
+    if ( total <= 75 ){
+        shipping = 8;
+        shippingLabel = "$8";
+    } else {
+        shipping = 0;
+        shippingLabel = "Congrats! You've earned FREE SHIPPING";
+    };
+
+    let estimatedTax = total * 0.08875;
+
+    let estimatedTotal = total + estimatedTax + shipping;
+
+    let roundedEstimatedTotal = parseFloat( estimatedTotal ).toFixed(2);
+ 
     return(
         <div className="shoppingCart-content">
             <h3><i class="fa fa-shopping-cart" aria-hidden="true"></i>  Your Shopping Cart</h3>
@@ -82,14 +103,26 @@ function ShoppingCart(){
                         <h4>Order Summary</h4>
                         <h4>{ shoppingCart.length }  ITEMS</h4>
                     </div>
-                    <hr></hr>
+                    <hr className="first-hr"/>
                     <div className="two">
                         <h5>Mechandise Total</h5>
-
-                        
-                                                
-                            
-                        
+                        <h5> $ {total} </h5>                
+                    </div>
+                    <div className="three">
+                        <h5>Estimated Shipping</h5>
+                        <h5>{shippingLabel}</h5>
+                    </div>
+                    <div className="four">
+                        <h5>Estimated Taxes &nbsp; <span>8.875%</span></h5>
+                        <h5> $ { estimatedTax }</h5>
+                    </div>
+                    <hr className="second-hr"/>
+                    <div className="five">
+                        <h5>Estimated Total</h5>
+                        <h4> $ { roundedEstimatedTotal }</h4>
+                    </div>
+                    <div className="six">
+                        <button><i class="fa fa-lock" aria-hidden="true"></i> CHECKOUT </button>
                     </div>
                 </div>
                 

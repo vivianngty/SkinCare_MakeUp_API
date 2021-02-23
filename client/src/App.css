@@ -2,6 +2,16 @@ body{
   font-family: 'Jaldi', sans-serif;
   margin: 100px;
 }
+.free-shipping-banner{
+  display: block;
+  width: 80%;
+  padding: 10px;
+  background-color: #4d186e;
+  color: white;
+  font-size: 12px;
+  position: fixed;
+  top: 0;
+}
 
 .shoppingcart-nav{
   text-decoration: none;
