@@ -10,7 +10,7 @@ function Moisturizer (){
 
     async function getMoisturizer(){
         try{
-        const res = await axios.get('http://localhost:8080/moisturizer')
+        const res = await axios.get('https://desolate-falls-27737.herokuapp.com/moisturizer')
         setMoisturizers(res.data);
         }catch(e){
         console.error (e, e.message);
@@ -39,7 +39,7 @@ function Moisturizer (){
        async function createCart(){
         /* let item = {"brand": selectedItem.brand, "name": selectedItem.name, "price": selectedItem.price, "image": selectedItem.image}; */
         try{
-            const res = await axios.post ('http://localhost:8080/cart', selectedItem);
+            const res = await axios.post ('https://desolate-falls-27737.herokuapp.com/cart', selectedItem);
             console.log (res.data);
         }catch(e){
             console.error (e, e.message)

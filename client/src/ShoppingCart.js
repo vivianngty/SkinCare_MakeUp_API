@@ -12,7 +12,7 @@ function ShoppingCart(){
 
     async function getShoppingCart(){
         try{
-            const res = await axios.get ('http://localhost:8080/cart');
+            const res = await axios.get ('https://desolate-falls-27737.herokuapp.com/cart');
             setShoppingCart (res.data);
         }catch(e){
             console.error (e, e.message);
@@ -25,9 +25,9 @@ function ShoppingCart(){
 
     async function handleDelete (id){
         try{
-            const res = await axios.delete ('http://localhost:8080/cart/' + id );
+            const res = await axios.delete ('https://desolate-falls-27737.herokuapp.com/cart/' + id );
             console.log (res.data);
-            const updatedRes = await axios.get ('http://localhost:8080/cart');
+            const updatedRes = await axios.get ('https://desolate-falls-27737.herokuapp.com/cart');
             console.log (updatedRes.data)
             setShoppingCart (updatedRes.data);
         }catch(e){
@@ -105,7 +105,7 @@ function EmptyCart(){
 
     async function getCleanser(){
         try{
-        const res = await axios.get('http://localhost:8080/cleansers/' + random );
+        const res = await axios.get('https://desolate-falls-27737.herokuapp.com/cleansers/' + random );
         setCleanser(res.data);
         }catch(e){
         console.error (e, e.message);
@@ -116,7 +116,7 @@ function EmptyCart(){
 
     async function getToner(){
         try{
-        const res = await axios.get('http://localhost:8080/toner/' + random)
+        const res = await axios.get('https://desolate-falls-27737.herokuapp.com/toner/' + random)
         setToner (res.data);
         }catch(e){
         console.error (e, e.message);
@@ -127,7 +127,7 @@ function EmptyCart(){
 
     async function getEyeCream(){
         try{
-        const res = await axios.get('http://localhost:8080/eyecream/' + random)
+        const res = await axios.get('https://desolate-falls-27737.herokuapp.com/eyecream/' + random)
         setEyeCream (res.data);
         console.log (random);
         console.log (res.data);
@@ -140,7 +140,7 @@ function EmptyCart(){
 
     async function getSerum(){
         try{
-        const res = await axios.get('http://localhost:8080/serum/' + random)
+        const res = await axios.get('https://desolate-falls-27737.herokuapp.com/serum/' + random)
         setSerum (res.data);
         }catch(e){
         console.error (e, e.message);
@@ -151,7 +151,7 @@ function EmptyCart(){
 
     async function getMoisturizer(){
         try{
-        const res = await axios.get('http://localhost:8080/moisturizer/' + random)
+        const res = await axios.get('https://desolate-falls-27737.herokuapp.com/moisturizer/' + random)
         setMoisturizer (res.data);
         }catch(e){
         console.error (e, e.message);
@@ -162,7 +162,7 @@ function EmptyCart(){
 
     async function getFaceoil(){
         try{
-        const res = await axios.get('http://localhost:8080/faceoil/' + random)
+        const res = await axios.get('https://desolate-falls-27737.herokuapp.com/faceoil/' + random)
         setFaceoil (res.data);
         }catch(e){
         console.error (e, e.message);

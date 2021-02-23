@@ -48,7 +48,7 @@ function App() {
 
       async function getShoppingCart(){
         try{
-            const res = await axios.get ('http://localhost:8080/cart');
+            const res = await axios.get ('https://desolate-falls-27737.herokuapp.com/cart');
             setShoppingCart (res.data);
         }catch(e){
             console.error (e, e.message);
