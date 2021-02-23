@@ -21,18 +21,18 @@ function Cleansers (){
         getCleanser()
     }, [])
 
-    const [ selectedItem, setSelectedItem ] = useState([]);
+    const [ selectedItem, setSelectedItem ] = useState(null);
+
+
 
 
 
     // need to add ...cart //
     
-    function selectItem(cleanser){
+     function selectItem(cleanser){
         setSelectedItem(cleanser);
         createCart(); 
-/*         let cart = {"brand": selectedItem.brand, "name": selectedItem.name, "price": selectedItem.price, "image": selectedItem.image};
-        console.log(cart) */
-    }
+    } 
 
     useEffect (() => {
         createCart();
@@ -41,14 +41,16 @@ function Cleansers (){
     
 
        async function createCart(){
-        let item = {"brand": selectedItem.brand, "name": selectedItem.name, "price": selectedItem.price, "image": selectedItem.image};
+       /*  let item = {"brand": selectedItem.brand, "name": selectedItem.name, "price": selectedItem.price, "image": selectedItem.image}; */
         try{
-            const res = await axios.post ('http://localhost:8080/cart', item);
+            const res = await axios.post ('http://localhost:8080/cart', selectedItem);
             console.log (res.data);
         }catch(e){
             console.error (e, e.message)
         }
-    }     
+    }
+    
+    
 
     return(
         <div>
@@ -58,12 +60,15 @@ function Cleansers (){
                 {
                     cleansers && cleansers.map (cleanser => {
                         return(
-                            <div className="cleanser-item" key={ cleanser.id }>
+                            <div className="cleanser-item" key={ cleanser.id } /* onSubmit={ (e) => handleSubmit(e) } */>
                                 <figure><img src= { cleanser.image } /></figure>
                                 <h5 className="cleanser-brand">{ cleanser.brand }</h5>
                                 <h4>{ cleanser.name }</h4>
                                 <h4>${ cleanser.price }</h4>
-                                <button onClick={ () => selectItem(cleanser)}> Add to cart </button>
+                                {/* <div className="cleanser-quantity" onChange = { (e) => handleChange(e) }>
+                                    <input type="number" className="quantity-box" id="quantity" name="quantity" min="1" max="20" placeholder="Quantity"/>
+                                </div> */}
+                                <button type="submit" onClick={ () => selectItem(cleanser)}> Add to cart </button>
                             </div>
                         )
                     })

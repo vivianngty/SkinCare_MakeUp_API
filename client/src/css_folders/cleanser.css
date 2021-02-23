@@ -38,7 +38,7 @@
   }
 
   .cleanser-item button{
-        border-radius: 15%;
+    border-radius: 15%;
       border: none;
       padding: 10px;
       margin-bottom: 5px;
@@ -47,7 +47,8 @@
   }
 
   .cleanser-item button:hover{
-    background-color: lightgray;
+    background-color: black;
+    color:white;
     cursor: pointer;
     font-size: 12px;
 }
@@ -55,4 +56,11 @@
 
   .cleanser-brand{
       font-style: italic;
+  }
+
+  .quantity-box{
+    border: none;
+    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 2px;
+    width: 80px;
+    height: 20px;
   }

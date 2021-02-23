@@ -21,7 +21,7 @@ function SensitiveSkin (){
         getSensitiveSkin()
     }, [])
 
-    const [ selectedItem, setSelectedItem ] = useState([]);
+    const [ selectedItem, setSelectedItem ] = useState(null);
 
 
 
@@ -37,9 +37,9 @@ function SensitiveSkin (){
     
 
        async function createCart(){
-        let item = {"brand": selectedItem.brand, "name": selectedItem.name, "price": selectedItem.price, "image": selectedItem.image};
+        /* let item = {"brand": selectedItem.brand, "name": selectedItem.name, "price": selectedItem.price, "image": selectedItem.image}; */
         try{
-            const res = await axios.post ('http://localhost:8080/cart', item);
+            const res = await axios.post ('http://localhost:8080/cart', selectedItem);
             console.log (res.data);
         }catch(e){
             console.error (e, e.message)

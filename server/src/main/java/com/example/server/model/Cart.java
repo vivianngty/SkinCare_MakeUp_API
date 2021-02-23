@@ -17,6 +17,8 @@ public class Cart {
     @Column
     private int price;
     @Column
+    private int quantity;
+    @Column
     private String image;
 
     public Cart() {
@@ -52,6 +54,14 @@ public class Cart {
 
     public void setPrice(int price) {
         this.price = price;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
     }
 
     public String getImage() {
