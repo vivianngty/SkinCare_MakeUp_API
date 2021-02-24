@@ -30,3 +30,22 @@ Using:
 - Springboot
 - PSQL
 - React
+
+Database URL:
+https://desolate-falls-27737.herokuapp.com/
+
+Tags:
+/cleansers
+/eyecream
+/toner
+/serum
+/moisturizer
+/faceoil
+/normalskin
+/dryskin
+/oilyskin
+/combinationskin
+/secsitiveskin
+
+Deployed link:: 
+http://misty-flowers.surge.sh/
