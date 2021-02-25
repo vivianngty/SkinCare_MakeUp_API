@@ -94,11 +94,13 @@ function App() {
 
         <div className="navbar">
 
+            <Link to="/" className="navbar-logo"><i class="fa fa-home" aria-hidden="true"></i></Link>
+
             <ul className="nav-menu">
 
-              <li className="home"> 
+              {/* <li className='navbar-logo'> 
                 <Link to="/" className="home-nav"><i class="fa fa-home" aria-hidden="true"></i></Link>
-              </li>
+              </li> */}
 
               <li className='nav-item' onClick={onMouseEnter} onMouseLeave={onMouseLeave} >
                   <Link className='nav-links' onClick={closeMobileMenu}>Skin Care <i className="fas fa-caret-down" /></Link>
