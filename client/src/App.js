@@ -37,12 +37,35 @@ import Help from './pages/Help'
 
 function App() {
 
- 
+
+  const [click, setClick] = useState(false);
   const [ dropdownskincare, setDropdownSkinCare ] = useState (false);
 
   const onMouseEnter = () => {
-    setDropdownSkinCare(true)
+    if (window.innerWidth < 960) {
+      setDropdownSkinCare(false);
+    } else {
+      setDropdownSkinCare(true);
+    }
   };
+
+  const onMouseLeave = () => {
+    if (window.innerWidth < 960) {
+      setDropdownSkinCare(false);
+    } else {
+      setDropdownSkinCare(false);
+    }
+  };
+
+/*   const onMouseEnter = () => {
+    setDropdownSkinCare(true)
+  }; */
+
+  const handleClick = () => setClick(!click);
+
+  const closeMobileMenu = () => setClick(false);
+
+
 
       const [ shoppingCart, setShoppingCart ] = useState ([]);
 
@@ -63,18 +86,13 @@ function App() {
 
   return (
     <div>
-      
       <Router>
         <div className="header">
-        
           <Link to="/shoppingcart" className="shoppingcart-nav"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Shopping Cart ({shoppingCart.length}) </Link>
-{/*           <header>
-              <Link to="/" className="home-nav">Skin Care API</Link>
-          </header> */}
+
         </div>
 
         <div className="navbar">
-          {/* <h3 className="free-shipping-banner">FREE SHIPPING ON U.S. ORDERS $75+ </h3> */}
 
             <ul className="nav-menu">
 
@@ -82,8 +100,8 @@ function App() {
                 <Link to="/" className="home-nav"><i class="fa fa-home" aria-hidden="true"></i></Link>
               </li>
 
-              <li className='nav-item' onClick={onMouseEnter} >
-                  <Link className='nav-links' onClick={onMouseEnter}>Skin Care <i className="fas fa-caret-down" /></Link>
+              <li className='nav-item' onClick={onMouseEnter} onMouseLeave={onMouseLeave} >
+                  <Link className='nav-links' onClick={closeMobileMenu}>Skin Care <i className="fas fa-caret-down" /></Link>
                   { dropdownskincare && <Dropdownskincare /> }                
               </li>
 
@@ -188,5 +206,3 @@ class Home extends React.Component{
 
 
 export default App;
-
-/* This is a test hahahaha */
